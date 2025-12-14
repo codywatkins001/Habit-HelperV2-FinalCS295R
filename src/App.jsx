@@ -29,7 +29,6 @@ export default function App() {
   };
 
   const deleteHabit = (id) => {
-    console.log("Deleting habit with id:", id); // 🔹 debug
     setHabits((prev) => prev.filter((h) => h.id !== id));
   };
 
