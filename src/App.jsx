@@ -28,6 +28,11 @@ export default function App() {
     );
   };
 
+  const deleteHabit = (id) => {
+    console.log("Deleting habit with id:", id); // 🔹 debug
+    setHabits((prev) => prev.filter((h) => h.id !== id));
+  };
+
   const resetHabits = () => setHabits([]);
 
   return (
@@ -36,7 +41,7 @@ export default function App() {
         <h1 className="text-3xl font-bold mb-4">Habit Helper</h1>
         <Progress habits={habits} />
         <AddHabit onAdd={addHabit} />
-        <HabitList habits={habits} onMark={markHabit} />
+        <HabitList habits={habits} onMark={markHabit} onDelete={deleteHabit} />
         <button
           onClick={resetHabits}
           className="mt-4 w-full bg-black text-white py-2 rounded"
