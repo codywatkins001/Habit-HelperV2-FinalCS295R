@@ -17,7 +17,7 @@ export default function HabitItem({ habit, onMark, onDelete }) {
           onClick={() => onDelete(habit.id)}
           className="px-3 py-1 rounded bg-red-500 text-white"
         >
-          🗑️
+          Delete
         </button>
       </div>
     </div>
